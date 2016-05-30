@@ -6,13 +6,28 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($timeout, webDevTec, toastr) {
+  function MainController($timeout, webDevTec, toastr, Swiper) {
     var vm = this;
 
     vm.awesomeThings = [];
     vm.classAnimation = '';
     vm.creationDate = 1460478293233;
     vm.showToastr = showToastr;
+    vm.swiper = new Swiper('.swiper-container', {
+      // Optional parameters
+      direction: 'vertical',
+      loop: true,
+      
+      // If we need pagination
+      pagination: '.swiper-pagination',
+      
+      // Navigation arrows
+      nextButton: '.swiper-button-next',
+      prevButton: '.swiper-button-prev',
+      
+      // And if we need scrollbar
+      scrollbar: '.swiper-scrollbar',
+    }) ;
 
     activate();
 

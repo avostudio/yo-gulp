@@ -8,13 +8,31 @@
   /** @ngInject */
   function routerConfig($stateProvider, $urlRouterProvider) {
     $stateProvider
-      .state('home', {
+      .state('root', {
+        abstract: true
+      })
+      .state('root.mobile', {
+        abstract: true
+      })
+      .state('root.mobile.home', {
         url: '/',
-        templateUrl: 'app/main/main.html',
-        controller: 'MainController',
-        controllerAs: 'main'
+        views: {
+          '@': {
+            controller: 'MobileHomeController',
+            controllerAs: 'mobileHome',
+            templateUrl: 'app/mobile/home/home.html'
+          }
+        }        
       });
+      /*.state('gallery', {
+        url: '/Galerie',
+        views: {
+          '@': {
 
+          }
+        },
+
+      });*/
     $urlRouterProvider.otherwise('/');
   }
 
