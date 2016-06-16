@@ -9,18 +9,28 @@
   function routerConfig($stateProvider, $urlRouterProvider) {
     $stateProvider
       .state('root', {
-        abstract: true        
+        abstract: true       
       })
 
       // DESKTOP STATES
 
       .state('root.desktop', {
-        abstract: true
+        abstract: true,
+        views: {
+          '@': {
+            templateUrl: 'app/desktop/desktop.content.html'
+          },
+          'menu@root.desktop': {
+            controller: 'DesktopMenuController',
+            controllerAs: 'menu',
+            templateUrl: 'app/desktop/menu/desktop.menu.html'
+          }
+        }
       })
       .state('root.desktop.home', {
         url: '/',
         views: {
-          '@': {
+          'content@root.desktop': {
             controller: 'DesktopHomeController',
             controllerAs: 'home',
             templateUrl: 'app/desktop/home/desktop.home.html'
@@ -49,7 +59,7 @@
       .state('root.mobile.home', {
         url: '/home',
         views: {
-          '@': {
+          '@root.mobile.home': {
             controller: 'MobileHomeController',
             controllerAs: 'mobileHome',
             templateUrl: 'app/mobile/home/mobile.home.html'
