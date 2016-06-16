@@ -25,7 +25,7 @@
 	}
 
 	/*-----------------------
-	LOGO & IMPRESSUM
+	LOGO
 	------------------------*/
 
 	#logo {
@@ -52,7 +52,104 @@
 		color: #820101;
 	}
 
-	// Slider
+	/* -------------------
+	VERLEIH UND KONTAKT
+	----------------------*/
+
+	#text-overlay {
+		position: absolute;
+		top: 25%;
+		height: 270px;
+		width: 100%;
+		background-color: #fff;
+		opacity: 0.8;
+		text-align: center;
+		padding: 15px 0;
+	}
+	#text-overlay .map {
+		display: inline-block;
+		width: 240px;
+		height: 240px;
+		background: url(../../assets/images/map.png);
+	}
+	#text-overlay .textbox {
+		text-align: left;
+		font-size: 16px;
+		color: #000;
+		width: 470px;
+		display: inline-block;
+		margin-left: 10px;
+	}
+	#text-overlay .textbox h1 {
+		color: #820101;
+		font-style: italic;
+		font-size: 22px;
+		line-height: 26px;
+	}
+	#text-overlay .textbox span {
+		font-style: italic;
+		font-size: 20px;
+		display: block;
+		line-height: 24px;
+	}
+	#text-overlay .textbox span a {
+		color: #000;
+	}
+	#text-overlay .textbox span a:hover {
+		color: #820101;
+	}
+
+	/* --------------------
+	 IMPRESSUM
+	---------------------*/
+
+	#impressum-overlay {
+		position: absolute;
+		top: 22%;
+		min-height: 315px;
+		width: 100%;
+		background-color: #fff;
+		opacity: 0.8;
+		text-align: center;
+		padding: 15px 0 0;
+		padding-bottom: 10px;
+	}
+	#impressum-overlay .textbox {
+		text-align: left;
+		font-size: 16px;
+		color: #000;
+		width: 60%;
+		display: inline-block;
+		margin-left: 10px;
+	}
+	#impressum-overlay .textbox h1 {
+		color: #820101;
+		font-style: italic;
+		font-size: 22px;
+		line-height: 30px;
+	}
+	#impressum-overlay .textbox h2 {
+		color: #820101;
+		font-style: italic;
+		font-size: 20px;
+		line-height: 28px;
+	}
+	#impressum-overlay .textbox span {
+		font-style: italic;
+		font-size: 20px;
+		display: block;
+		line-height: 28px;
+	}
+	#impressum-overlay .textbox span a {
+		color: #000;
+	}
+	#impressum-overlay .textbox span a:hover {
+		color: #820101;
+	}
+
+	/* --------------------
+	 SLIDER
+	---------------------*/
 
 	.slider {
 	    width: 100%;
@@ -65,7 +162,7 @@
 
 	.slide {
 	    position: absolute;
-	    top: -25%;
+	    top: 0;
 	    left: 0;
 	    width: 100%;
 	    height: auto;
