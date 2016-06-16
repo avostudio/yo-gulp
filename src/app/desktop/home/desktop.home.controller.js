@@ -37,7 +37,9 @@
     $interval(home.nextSlide, 3000);    
     
     /*$http.get('http://diamant-dekowelt.de/admin/getGallery.php?id=16').then(function (response) {
-      mobileHome.gallery = response;
+      $timeout(function() {
+        home.slides = response;  
+      });      
       return response;
     }, errorHandler);*/
 

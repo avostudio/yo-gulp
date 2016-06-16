@@ -24,6 +24,9 @@
             controller: 'DesktopMenuController',
             controllerAs: 'menu',
             templateUrl: 'app/desktop/menu/desktop.menu.html'
+          },
+          'logo@root.desktop': {
+            templateUrl: 'app/desktop/logo/desktop.logo.html'
           }
         }
       })
