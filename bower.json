@@ -17,7 +17,8 @@
     "moment": "~2.10.6",
     "animate.css": "~3.4.0",
     "angular": "~1.5.3",
-	"swiper": "~2.7.6"
+	  "swiper": "~2.7.6",
+    "tweenmax": "https://github.com/greensock/GreenSock-JS.git"
   },
   "devDependencies": {
     "angular-mocks": "~1.5.3"
