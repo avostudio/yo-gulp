@@ -45,13 +45,61 @@
           }]
         },
         onEnter: ['$state', 'isMobile', function onEnter($state, isMobile) {
-          console.log('isMobile: ' + isMobile);
           if (isMobile) {
             $state.go('root.mobile.home');
           }
         }]      
       })
-
+      .state('root.desktop.galerie', {
+        url: '/galerie',
+        views: {
+          'content@root.desktop': {
+            controller: 'GalerieController',
+            controllerAs: 'galerie',
+            templateUrl: 'app/desktop/home/desktop.home.html'
+          }
+        }      
+      })
+      .state('root.desktop.floristik', {
+        url: '/floristik',
+        views: {
+          'content@root.desktop': {
+            controller: 'DesktopSlidesController',
+            controllerAs: 'slides',
+            templateUrl: 'app/desktop/slides/desktop.slides.html'
+          }
+        },
+        resolve: {
+          galleryNumber: [function () {
+            return 13;
+          }]
+        },     
+      })
+      .state('root.desktop.dekoration', {
+        url: '/dekoration',
+        views: {
+          'content@root.desktop': {
+            controller: 'DesktopSlidesController',
+            controllerAs: 'slides',
+            templateUrl: 'app/desktop/slides/desktop.slides.html'
+          }
+        },
+        resolve: {
+          galleryNumber: [function () {
+            return 16;
+          }]
+        },     
+      })
+      .state('root.desktop.verleih', {
+        url: '/verleih',
+        views: {
+          'content@root.desktop': {
+            controller: 'DesktopVerleihController',
+            controllerAs: 'verleih',
+            templateUrl: 'app/desktop/verleih/desktop.verleih.html'
+          }
+        }     
+      })
 
       // MOBILE STATES
 

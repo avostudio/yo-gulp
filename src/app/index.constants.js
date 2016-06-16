@@ -4,7 +4,6 @@
 
   angular
     .module('yoGulp')
-    .constant('malarkey', malarkey)
     .constant('moment', moment);
 
 })();

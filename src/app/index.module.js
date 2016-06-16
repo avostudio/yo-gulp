@@ -11,7 +11,6 @@
     	'ngAria', 
     	'ui.router', 
     	'ui.bootstrap', 
-    	'toastr',
     	'yoGulp.Swiper'
 	]);
 
