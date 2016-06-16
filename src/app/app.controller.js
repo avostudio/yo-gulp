@@ -41,8 +41,7 @@
     }
 
     function detectMobileView() {
-        var clientWidth = body.clientWidth;
-        return $window.document.body <= 767;
+        return $window.document.body.clientWidth <= 767;
     }
 
     function switchStates() {

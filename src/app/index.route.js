@@ -155,27 +155,54 @@
 
       .state('root.mobile', {
         abstract: true,
-        url: '/mobile'
+        url: '/mobile',
+        views: {
+          'app@root': {
+            templateUrl: 'app/mobile/mobile.content.html'
+          }
+        }
       })
       .state('root.mobile.home', {
         url: '/home',
         views: {
-          '@root.mobile.home': {
+          'content@root.mobile': {
             controller: 'MobileHomeController',
             controllerAs: 'mobileHome',
             templateUrl: 'app/mobile/home/mobile.home.html'
           }
         }        
-      });
-      /*.state('gallery', {
-        url: '/Galerie',
+      })
+      .state('root.mobile.dekoration', {
+        url: '/dekoration',
         views: {
-          '@': {
-
+          'content@root.mobile': {
+            controller: 'MobileSlidesController',
+            controllerAs: 'slides',
+            templateUrl: 'app/mobile/slides/mobile.slides.html'
           }
         },
+        resolve: {
+          galleryNumber: [function () {
+            return 16;
+          }]
+        }     
+      })
+      .state('root.mobile.floristik', {
+        url: '/floristik',
+        views: {
+          'content@root.mobile': {
+            controller: 'MobileSlidesController',
+            controllerAs: 'slides',
+            templateUrl: 'app/mobile/slides/mobile.slides.html'
+          }
+        },
+        resolve: {
+          galleryNumber: [function () {
+            return 13;
+          }]
+        }     
+      });
 
-      });*/
     $urlRouterProvider.otherwise('/');
   }
 
