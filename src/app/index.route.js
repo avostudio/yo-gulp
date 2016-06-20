@@ -159,6 +159,12 @@
         views: {
           'app@root': {
             templateUrl: 'app/mobile/mobile.content.html'
+          },
+          'logo@root.mobile': {
+            templateUrl: 'app/mobile/logo/logo.html'
+          },
+          'menu@root.mobile': {
+            templateUrl: 'app/mobile/menu/menu.html'
           }
         }
       })
