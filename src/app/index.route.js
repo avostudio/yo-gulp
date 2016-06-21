@@ -190,6 +190,9 @@
         resolve: {
           galleryNumber: [function () {
             return 16;
+          }],
+          gallery: ['MobileSlidesService', 'galleryNumber', function getGallery(MobileSlidesService, galleryNumber) {
+            return MobileSlidesService.getGallery(galleryNumber);
           }]
         }     
       })
@@ -205,6 +208,9 @@
         resolve: {
           galleryNumber: [function () {
             return 13;
+          }],
+          gallery: ['MobileSlidesService', 'galleryNumber', function getGallery(MobileSlidesService, galleryNumber) {
+            return MobileSlidesService.getGallery(galleryNumber);
           }]
         }     
       });

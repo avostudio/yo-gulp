@@ -1,13 +1,15 @@
 <div id="sp-nav">
     <div class="topcoat-list-container">
         <ul class="topcoat-list">
-            <li class="topcoat-list__item">Navigation Item 1</li>
-            <li class="topcoat-list__item">Navigation Item 2</li>
-            <li class="topcoat-list__item">Navigation Item 3</li>
+            <li class="topcoat-list-item" ui-sref=".home" ng-click="$spMenu.toggle()">Home</li>
+            <!--<li class="topcoat-list-item" ui-sref=".galerie" ng-click="$spMenu.toggle()">Galerie</li>-->
+            <li class="topcoat-list-item" ui-sref=".floristik" ng-click="$spMenu.toggle()">Floristik</li>
+            <li class="topcoat-list-item" ui-sref=".dekoration" ng-click="$spMenu.toggle()">Dekoration</li>
+            <!--<li class="topcoat-list-item" ui-sref=".verleih" ng-click="$spMenu.toggle()">Verleih</li>-->
+            <li class="topcoat-list-item" ui-sref=".kontakt" ng-click="$spMenu.toggle()">Kontakt</li>
         </ul>
     </div>
 </div>
-
 <div id="sp-page">
     <div class="topcoat-navigation-bar">
         <div class="topcoat-navigation-bar__item left quarter">
@@ -16,7 +18,7 @@
             </a>
         </div>
         <div class="topcoat-navigation-bar__item center half">
-            <h1 class="topcoat-navigation-bar__title">ng-mobile-menu Demo</h1>
+            <h1 class="topcoat-navigation-bar__title">Diamant-Dekowelt</h1>
         </div>
         <div class="topcoat-navigation-bar__item right quarter">
             <a class="topcoat-icon-button--quiet">
@@ -24,7 +26,6 @@
             </a>
         </div>
     </div>
-    <p>This demo shows the ng-mobile-menu in action. The styling is all provided by Adobe's <a href="http://topcoat.io">Topcoat</a>.
-        Go to the <a href="#/wide">wide demo</a>.
-    </p>
+    <div id="logo" ui-view="logo"></div>
+    <div id="content" ui-view="content"></div>
 </div>
